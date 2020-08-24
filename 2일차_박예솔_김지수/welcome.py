@@ -21,11 +21,9 @@ time.sleep(3)
 
 display=lcddriver.lcd()
 
-notHome=True
 try:
-    while notHome:
+    while True:
         if GPIO.input(sensor) == 1:
-            notHome=False
             print("Detect!")
             display.lcd_display_string('Welcome to',1)
             display.lcd_display_string('SMART HOME',2)
